@@ -117,3 +117,28 @@ section h2 {
 .experience-item ul li {
     margin-bottom: 0.3rem;
 }
+
+.project-item {
+    margin-bottom: 2rem;
+}
+
+.project-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+}
+
+.project-item h3 a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border 0.3s;
+}
+
+.project-item h3 a:hover {
+    border-bottom: 1px solid #fff;
+}
+
+.project-item p {
+    font-size: 1rem;
+    color: #ccc;
+}
