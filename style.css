@@ -1,12 +1,17 @@
-/* Global */
+/* ---------- Global Styles ---------- */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "San Francisco", sans-serif;
     background-color: #000;
     color: #fff;
+    line-height: 1.6;
 }
 
-/* Navbar */
+/* ---------- Navbar ---------- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -16,12 +21,19 @@ body {
     width: 100%;
     background-color: #000;
     z-index: 1000;
+    border-bottom: 1px solid #222;
 }
 
 .nav-links a {
     margin-left: 2rem;
     text-decoration: none;
     color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #1e90ff; /* subtle accent */
 }
 
 .hamburger {
@@ -30,7 +42,21 @@ body {
     cursor: pointer;
 }
 
-/* Home Section */
+/* ---------- Sections ---------- */
+section {
+    padding: 6rem 2rem 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 0.5rem;
+}
+
+/* ---------- Home ---------- */
 #home {
     display: flex;
     flex-direction: column;
@@ -46,40 +72,21 @@ body {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
+    border: 2px solid #fff;
 }
 
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #000;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-    }
-    .nav-links.active {
-        display: flex;
-    }
-    .nav-links a {
-        margin: 1rem;
-    }
-    .hamburger {
-        display: block;
-    }
+#home h1 {
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
 }
 
-section {
-    padding: 6rem 2rem 4rem 2rem;
-    max-width: 800px;
-    margin: 0 auto;
+#home h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #ccc;
 }
 
-section h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
+/* ---------- About Me ---------- */
 .btn {
     display: inline-block;
     padding: 0.5rem 1rem;
@@ -87,7 +94,8 @@ section h2 {
     border: 1px solid #fff;
     color: #fff;
     text-decoration: none;
-    transition: background 0.3s;
+    transition: all 0.3s;
+    border-radius: 4px;
 }
 
 .btn:hover {
@@ -95,13 +103,14 @@ section h2 {
     color: #000;
 }
 
-.experience-item {
+/* ---------- Experience & Projects ---------- */
+.experience-item, .project-item {
     margin-bottom: 2rem;
 }
 
-.experience-item h3 {
-    margin-bottom: 0.3rem;
+.experience-item h3, .project-item h3 {
     font-size: 1.3rem;
+    margin-bottom: 0.3rem;
 }
 
 .experience-item span {
@@ -114,17 +123,9 @@ section h2 {
     padding-left: 1.5rem;
 }
 
-.experience-item ul li {
+.experience-item ul li, .project-item p {
     margin-bottom: 0.3rem;
-}
-
-.project-item {
-    margin-bottom: 2rem;
-}
-
-.project-item h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.3rem;
+    color: #ccc;
 }
 
 .project-item h3 a {
@@ -138,11 +139,7 @@ section h2 {
     border-bottom: 1px solid #fff;
 }
 
-.project-item p {
-    font-size: 1rem;
-    color: #ccc;
-}
-
+/* ---------- Contact ---------- */
 #contact ul {
     list-style: none;
     padding-left: 0;
@@ -161,4 +158,31 @@ section h2 {
 
 #contact ul li a:hover {
     border-bottom: 1px solid #fff;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #000;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        border-left: 1px solid #222;
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
 }
