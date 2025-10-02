@@ -1,16 +1,28 @@
-// Hamburger menu toggle
+// Hamburger menu toggle with accessibility
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-});
+if (hamburger && navLinks) {
+    const toggleMenu = (open) => {
+        const isOpen = open ?? !navLinks.classList.contains('active');
+        navLinks.classList.toggle('active', isOpen);
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+    };
 
-// Close menu when link clicked (mobile)
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        if (navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
+    hamburger.addEventListener('click', () => toggleMenu());
+
+    hamburger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleMenu();
+        }
+        if (e.key === 'Escape') {
+            toggleMenu(false);
         }
     });
-});
+
+    // Close menu when link clicked (mobile)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => toggleMenu(false));
+    });
+}

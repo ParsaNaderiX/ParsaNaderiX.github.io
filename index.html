@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Parsa Naderi — CS student focusing on ML, data science, and systems. Explore projects, experience, and contact information.">
     <title>Parsa Naderi | Portfolio</title>
+    <meta property="og:title" content="Parsa Naderi | Portfolio">
+    <meta property="og:description" content="CS student — ML, data science, and systems. Projects, experience, and contact.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/image.JPG">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,19 +23,20 @@
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </div>
-            <div class="hamburger" id="hamburger">
-                &#9776;
-            </div>
+            <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">&#9776;</button>
         </nav>
     </header>
 
     <!-- Home Section -->
     <section id="home">
         <div class="home-content">
-            <img src="assets/image.JPG" alt="Parsa Naderi" class="profile-img">
+            <img src="assets/image.JPG" alt="Portrait of Parsa Naderi" class="profile-img" width="150" height="150">
             <h1>Parsa Naderi</h1>
             <h2>Computer Science Student</h2>
-            <p>Welcome to my personal portfolio.</p>
+            <p>The people who are crazy enough to think they can change the world are the ones who do.
+                <br>
+                <em>Steve Jobs</em>
+            </p>
         </div>
     </section>
 
@@ -83,17 +89,17 @@
         <h2>Projects</h2>
 
         <div class="project-item">
-            <h3><a href="https://github.com/ParsaNaderiX/movie-recommendation-app" target="_blank">Movie Recommendation App</a></h3>
+            <h3><a href="https://github.com/ParsaNaderiX/movie-recommendation-app" target="_blank" rel="noopener noreferrer">Movie Recommendation App</a></h3>
             <p>Full-stack movie recommendation system using Go, React, and MongoDB. Features advanced aggregation pipelines and content-based filtering.</p>
         </div>
 
         <div class="project-item">
-            <h3><a href="https://github.com/ParsaNaderiX/marketplace-postgresql-database" target="_blank">Marketplace Database (PostgreSQL)</a></h3>
+            <h3><a href="https://github.com/ParsaNaderiX/marketplace-postgresql-database" target="_blank" rel="noopener noreferrer">Marketplace Database (PostgreSQL)</a></h3>
             <p>PostgreSQL marketplace database with full DDL, seed data, retrieval queries, CSV results, and ERD.</p>
         </div>
 
         <div class="project-item">
-            <h3><a href="https://github.com/ParsaNaderiX/library-management-app" target="_blank">Library Management App (In Progress)</a></h3>
+            <h3><a href="https://github.com/ParsaNaderiX/library-management-app" target="_blank" rel="noopener noreferrer">Library Management App (In Progress)</a></h3>
             <p>Small CRUD API for books (first phase completed). Will expand with database, user accounts, and frontend over time.</p>
         </div>
     </section>
@@ -103,13 +109,13 @@
         <h2>Contact</h2>
         <p>You can reach me via:</p>
         <ul>
-            <li>GitHub: <a href="https://github.com/ParsaNaderiX" target="_blank">ParsaNaderiX</a></li>
-            <li>LinkedIn: <a href="https://www.linkedin.com/in/parsanaderi" target="_blank">Parsa Naderi</a></li>
+            <li>GitHub: <a href="https://github.com/ParsaNaderiX" target="_blank" rel="noopener noreferrer">ParsaNaderiX</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/parsanaderi" target="_blank" rel="noopener noreferrer">Parsa Naderi</a></li>
             <li>Email: <a href="mailto:ParsaNaderi2004@gmail.com">ParsaNaderi2004@gmail.com</a></li>
         </ul>
     </section>
 
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
